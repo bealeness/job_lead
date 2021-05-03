@@ -1,0 +1,14 @@
+{% extends "users/base.html" %}
+{% block content %}
+    <div class="heading">
+        <h1>job_lead</h1>
+    </div>
+    <div class="card">
+        <h2>You have been signed out</h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                <a href="{% url 'sign_in' %}">Sign In Again</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
