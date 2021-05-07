@@ -95,3 +95,23 @@ h2 {
      display: inline;
      padding: 5px;
  }
+
+ .fresh {
+     color: green;
+ }
+
+ .applied {
+    color: green;
+}
+
+.response {
+    color: green;
+}
+
+.replied {
+    color: green;
+}
+
+.interview {
+    color: green;
+}

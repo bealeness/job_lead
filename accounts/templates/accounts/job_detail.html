@@ -23,6 +23,37 @@
             <li>Deadline: <p class="text-muted">{{ object.deadline }}</p></li>
             <li>Location: <p class="text-muted">{{ object.location }}</p></li>
             <li>Skills: <p class="text-muted">{{ object.skills }}</p></li>
+
+            {% if object.fresh == True %}
+                <li>Status: <p class="fresh">Fresh</p></li>
+            {% else %}
+            {% endif %}
+
+            {% if object.applied == True %}
+                <li>Status: <p class="applied">Applied</p></li>
+            {% else %}
+            {% endif %}
+
+            {% if object.response == True %}
+                <li>Status: <p class="response">Response</p></li>
+            {% else %}
+            {% endif %}
+
+            {% if object.replied == True %}
+                <li>Status: <p class="replied">Replied</p></li>
+            {% else %}
+            {% endif %}
+
+            {% if object.interview == True %}
+                <li>Status: <p class="interview">Interview</p></li>
+            {% else %}
+            {% endif %}
+
+            <li>Date Applied: <p class="text-muted">{{ object.applied_date }}</p></li>
+            <li>Response: <p class="text-muted">{{ object.response_act }}</p></li>
+            <li>Reply: <p class="text-muted">{{ object.reply_act }}</p></li>
+            <li>Interview Date: <p class="text-muted">{{ object.interview_date }}</p></li>
+            <li>Interview Method: <p class="text-muted">{{ object.interview_method }}</p></li>
         </ul>
 </div>
 {% endblock content %}
