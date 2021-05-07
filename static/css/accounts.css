@@ -5,7 +5,7 @@ nav {
     max-width: vw100;
     background-color: white;
     border-style: inset;
-    border-color: #2980b9;
+    border-color: #f39c12;
 }
 
 #navbarSupportedContent {
@@ -29,25 +29,26 @@ header {
     margin-top: 50px;
     border-radius:10px;
     margin-bottom: 100px;
-    background-color: #e17055;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f7/Testament_of_SH_-_Judge_Street_colored_sketch.png');
+    background-size: cover;
 }
 
 h2 {
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    color: #2980b9;
     text-shadow: 6px 6px black;
 }
 
 .row {
-    height: 400px;
+    min-height: 600px;
+    padding: 20px;
 }
 
 .col-2 {
     padding: 6px;
     margin-left: 65px;
     border-style: inset;
-    border-color: #b2bec3;
+    border-color: #f39c12;
     background-color: white;
     margin-top: 5px;
     font-size: smaller;
@@ -56,9 +57,9 @@ h2 {
 }
 
 .col-9 {
-    padding: 6px;
+    padding: 50px;
     border-style: inset;
-    border-color: #b2bec3;
+    border-color: #f39c12;
     background-color: white;
     margin-top: 5px;
     padding-left: 10px;

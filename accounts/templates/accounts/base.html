@@ -19,10 +19,10 @@
 </head>
 <body>
     <header class="title">
-        <h2 class="display-2"><a href="{% url 'profile' %}">job lead</a></h2>
+        <h2 class="display-1"><a href="{% url 'profile' %}">job lead</a></h2>
         <div class="dropdown">
             <a class="btn btn-outline-primary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              job_lead
+              {{ user.username }}
             </a>
           
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -62,7 +62,7 @@
         </nav>
         <div class="row">
             <div class="col-2">
-                <a href="#" id="button1">
+                <a href="{% url 'job-create' %}" id="button1">
                     <button class="btn btn-outline-primary"><i class="fas fa-plus"></i> New Job</button>
                 </a>
             </div>

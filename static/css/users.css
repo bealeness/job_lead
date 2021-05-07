@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
 body {
-    background-color: #e17055;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f7/Testament_of_SH_-_Judge_Street_colored_sketch.png');
+    background-size: cover;
 }
 
 h1 {
     color: #2980b9;
     text-shadow: 2px 2px black;
+    font-size: 70px;
 }
 
 .heading {
@@ -14,11 +16,14 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: 50px;
+    margin-top: 150px;
     font-family: 'Roboto Mono', monospace;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;
+    height: fit-content;
+    border-style: inset;
+    border-color: #f39c12;
 }
 
 .card {
@@ -27,9 +32,11 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 20px;
     margin-top: 50px;
-    border-radius:10px;
+    border-radius:5px;
     margin-bottom: 100px;
     background-color: white;
+    border-style: inset;
+    border-color: #f39c12;
 }
 
 #alert {

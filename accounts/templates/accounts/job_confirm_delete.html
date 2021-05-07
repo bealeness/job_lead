@@ -1,0 +1,17 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+    <button class="btn">
+        <a href="{% url 'profile' %}"><i class="fas fa-chevron-left"></i>Back</a>
+    </button>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Delete Job</legend>
+            <h3>Are you sure you want to delete the job {{ object.role }}?</h3>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">Yes Delete</button>
+            <a class="btn btn-outline-secondary" href="{% url 'job-detail' object.id %}">Cancel</a>
+        </div>
+    </form>
+{% endblock content %}

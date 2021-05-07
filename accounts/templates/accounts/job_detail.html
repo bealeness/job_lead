@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+<button class="btn">
+    <a href="{% url 'profile' %}"><i class="fas fa-chevron-left"></i>Back</a>
+</button>
+<br>
+<br>
+    <h3 class="text-muted">{{ object.role }}</h3>
+    {% if object.applicant == user %}
+        <a href="{% url 'job-delete' object.id %}">
+            <button class="btn btn-outline-danger btn-sm">Delete</button>
+        </a>
+    {% endif %}
+    <hr>
+        <ul>
+            <li>Company: <p class="text-muted">{{ object.company }}</p></li>
+            <li>Contact: <p class="text-muted">{{ object.contact }}</p></li>
+            <li>Deadline: <p class="text-muted">{{ object.deadline }}</p></li>
+            <li>Location: <p class="text-muted">{{ object.location }}</p></li>
+            <li>Skills: <p class="text-muted">{{ object.skills }}</p></li>
+        </ul>
+</div>
+{% endblock content %}
