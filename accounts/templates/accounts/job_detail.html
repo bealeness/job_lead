@@ -7,9 +7,14 @@
 <br>
     <h3 class="text-muted">{{ object.role }}</h3>
     {% if object.applicant == user %}
-        <a href="{% url 'job-delete' object.id %}">
-            <button class="btn btn-outline-danger btn-sm">Delete</button>
-        </a>
+        <div class="buttons">
+            <a href="{% url 'job-delete' object.id %}">
+                <button class="btn btn-outline-danger btn-sm">Delete</button>
+            </a>
+            <a href="{% url 'job-update' object.id %}">
+                <button class="btn btn-outline-info btn-sm">Update</button>
+            </a>
+        </div>
     {% endif %}
     <hr>
         <ul>

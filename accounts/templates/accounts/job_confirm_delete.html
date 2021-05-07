@@ -1,8 +1,5 @@
 {% extends "accounts/base.html" %}
 {% block content %}
-    <button class="btn">
-        <a href="{% url 'profile' %}"><i class="fas fa-chevron-left"></i>Back</a>
-    </button>
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">

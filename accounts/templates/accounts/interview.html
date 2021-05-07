@@ -1,0 +1,28 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+    <h1 class="text-muted">Interview</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Role</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Date</th>
+                <th scope="col">Method</th>
+            </tr>
+    {% for job in jobs %}
+        {% if job.applicant == user %}
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">{{ job.company }}</td>
+                    <td><a href="{% url 'job-detail' job.id %}">{{ job.role }}</a></td>
+                    <td>{{ job.contact }}</td>
+                    <td>{{ job.interview_date }}</td>
+                    <td>{{ job.interview_method }}</td>
+                </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock content %}

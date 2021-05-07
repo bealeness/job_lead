@@ -1,0 +1,26 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+    <h1 class="text-muted">Response</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Role</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Response</th>
+            </tr>
+    {% for job in jobs %}
+        {% if job.applicant == user %}
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">{{ job.company }}</td>
+                    <td><a href="{% url 'job-detail' job.id %}">{{ job.role }}</a></td>
+                    <td>{{ job.contact }}</td>
+                    <td>{{ job.response_act }}</td>
+                </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock content %}
