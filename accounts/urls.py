@@ -11,5 +11,6 @@ urlpatterns = [
     path('applied/', views.applied, name="applied"),
     path('response/', views.response, name="response"),
     path('replied/', views.replied, name="replied"),
-    path('interview/', views.interview, name="interview")
+    path('interview/', views.interview, name="interview"),
+    path('help/', views.help, name="help")
 ]

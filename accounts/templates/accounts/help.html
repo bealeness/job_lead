@@ -1,0 +1,50 @@
+{% extends 'accounts/base.html' %}
+{% block content %}
+    <div class="help">
+        <h1 class="text-muted">Welcome to job_lead</h1>
+        <hr>
+        <h6>This website is dedicated to helping you sort and organise your job search. Here is a quick
+            guide giving you the best information to get the most out of this website.
+        </h6>
+        <br>
+        <h6><b>New Job</b></h6>
+        <h6>The most important feature of this website is the new job form.  This is where you go to iniate a job
+            in the job_lead system.  Once saved it will appear as a new job on the Jobs page.
+        </h6>
+        <br>
+        <h6><b>Jobs</b></h6>
+        <h6>The Jobs page is where all new jobs are listed. To see a more detailed view of each job simply click
+            on the job role. You will be taken to the job detail page where you can either delete or update that
+            job.  Once you have applied for a job, it is your responsibility to update that job from 'fresh' to 'applied'. 
+            Doing this will move the job from the Jobs page to the Applied page.  Also make sure to fill out the remainder
+            of the update form.  Write NULL if if something does not yet apply.  Fill Interview Date in with today's date
+            and update it when you do have an interview date.
+        </h6>
+        <br>
+        <h6><b>Applied</b></h6>
+        <h6>This is where all of your applied for jobs are kept. Instead of displaying the deadline date, the applied 
+            for date is now shown.  When you have received a response from the employer update the jobs status from 
+            'applied' to 'response' and fill out the response act on the form.
+        </h6>
+        <br>
+        <h6><b>Response</b></h6>
+        <h6>The response page is where all your responded to jobs are kept. The response is displayed in the far column.
+            Once you have replied to the employer, update the jobs status from 'response' to 'replied' and fill out the 
+            reply act on the form.
+        </h6>
+        <br>
+        <h6><b>Replied</b></h6>
+        <h6>The replied page is where all your replied to jobs are kept. The reply is displayed in the far column. If you
+            are lucky enough to receive an interview from the employer update the jobs status from 'replied' to 'interview' 
+            and fill out the interview date and interview method sections of the form. If you are unsuccessful with receiving
+            an interview you can simply delete the job and it will be removed from the job_lead system.
+        </h6>
+        <br>
+        <h6><b>Interview</b></h6>
+        <h6>The interview page is the final stage of the job_lead process. This is where all of your interview details are kept
+            including interview date and interview method.
+        </h6>
+        <br>
+        <br>
+    </div>
+{% endblock content %}

@@ -48,6 +48,12 @@ def interview(request):
     }
     return render(request, 'accounts/interview.html', context)
 
+
+@login_required
+def help(request):
+    return render(request, 'accounts/help.html')
+
+
 class JobDetailView(DetailView):
     model = Job
 
