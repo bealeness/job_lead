@@ -70,7 +70,7 @@ class JobCreateView(LoginRequiredMixin, CreateView):
 class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Job
     fields = ['fresh', 'applied', 'response', 'replied', 'interview', 'applied_date', 'response_act', 'reply_act',
-                'interview_date', 'interview_method']
+                'interview_date', 'interview_method', 'notes']
 
     def form_valid(self, form):
         form.instance.applicant = self.request.user

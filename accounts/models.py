@@ -20,6 +20,7 @@ class Job(models.Model):
     reply_act = models.CharField(max_length=100, null=True)
     interview_date = models.DateField(auto_now=False, null=True)
     interview_method = models.CharField(max_length=30, null=True)
+    notes = models.TextField(null=True)
     applicant = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def get_absolute_url(self):
