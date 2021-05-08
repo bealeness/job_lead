@@ -1,11 +1,21 @@
-FROM python:3
+# Python and Linux Version 
+FROM python:3.10.0b1-alpine3.12
 
-WORKDIR /job_lead
+COPY requirements.txt /app/requirements.txt
 
-ADD . /job_lead
+# Configure server
+RUN set -ex \
+    && pip install --upgrade pip \  
+    && pip install --no-cache-dir -r /app/requirements.txt 
 
-COPY requiements.txt /job_lead/
+# Working directory
+WORKDIR /app
 
-RUN pip install -r requirements.txt
+ADD . .
 
-COPY . /job_lead/
+# EXPOSE 8000
+
+# CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "job_lead.wsgi:application"]
+
+# Heroku
+CMD gunicorn job_lead.wsgi:application --bind 0.0.0.0:$PORT
