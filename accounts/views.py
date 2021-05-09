@@ -85,7 +85,7 @@ class JobUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class JobDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Job
-    success_url = '/'
+    success_url = 'accounts/profile/'
 
     def test_func(self):
         job = self.get_object()
